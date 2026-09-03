@@ -1,0 +1,4 @@
+# local.properties.template
+# Copy this file to `android/local.properties` and replace the path below with your Android SDK path.
+# Example (macOS): sdk.dir=/Users/<your-username>/Library/Android/sdk
+sdk.dir=/PATH/TO/YOUR/ANDROID/SDK
