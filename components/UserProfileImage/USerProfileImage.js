@@ -5,8 +5,7 @@ import style from './style';
 
 const UserProfileImage = ({profileImage, imageDimensions}) => {
   return (
-    <View
-      style={[style.userImageContainer, {borderRadius: imageDimensions / 2}]}>
+    <View style={[style.userImageContainer, {borderRadius: imageDimensions}]}>
       <Image
         source={profileImage}
         style={{

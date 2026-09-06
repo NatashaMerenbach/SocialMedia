@@ -12,6 +12,7 @@ import Title from './components/Title/Title';
 import globalStyle from './assets/styles/globalStyle';
 import UserStory from './components/UserStory/UserStory';
 import UserPost from './components/UserPost/UserPost';
+import {fontScale} from './assets/styles/scaling';
 
 const userStories = [
   {
@@ -180,7 +181,6 @@ const App = () => {
   const [userPostCurrentPage, setUserPostCurrentPage] = useState(1);
   const [userPostRenderedData, setUserPostRenderedData] = useState([]);
   const [isLoadingUserPost, setIsLoadingUserPost] = useState(true);
-
   useEffect(() => {
     setIsLoadingUserStory(true);
     setIsLoadingUserPost(true);
@@ -225,7 +225,11 @@ const App = () => {
                 activeOpacity={0.7}
                 onPress={() => console.log('Envelope pressed')}
                 style={globalStyle.messageIcon}>
-                <FontAwesomeIcon icon={faEnvelope} size={20} color="#898DAE" />
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  size={fontScale(20)}
+                  color="#898DAE"
+                />
                 <View style={globalStyle.messageNumberContainer}>
                   <Text style={globalStyle.messageNumber}>2</Text>
                 </View>

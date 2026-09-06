@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {getFontFamily} from '../../helper';
+import {horizontalScale, verticalScale, fontScale} from './scaling';
 
 const globalStyle = StyleSheet.create({
   screen: {
@@ -9,64 +10,64 @@ const globalStyle = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginLeft: 27,
-    marginRight: 17,
-    marginTop: 30,
+    marginLeft: horizontalScale(27),
+    marginRight: horizontalScale(17),
+    marginTop: verticalScale(30),
   },
   messageIcon: {
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 14,
+    padding: horizontalScale(14),
   },
   messageNumberContainer: {
     backgroundColor: '#F35BAC',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    width: 10,
-    height: 10,
-    borderRadius: 10,
+    width: horizontalScale(10),
+    height: horizontalScale(10),
+    borderRadius: horizontalScale(10),
     position: 'absolute',
-    right: 11,
-    top: 12,
+    right: horizontalScale(11),
+    top: verticalScale(12),
   },
   messageNumber: {
     color: '#FFFFFF',
-    fontSize: 6,
+    fontSize: fontScale(6),
     fontFamily: getFontFamily('600'),
   },
   userStoryContainer: {
-    marginTop: 20,
-    marginHorizontal: 28,
+    marginTop: verticalScale(20),
+    marginHorizontal: horizontalScale(28),
   },
   userStoryList: {
     flexGrow: 0,
-    height: 100,
+    height: horizontalScale(100),
     width: '100%',
   },
   userPostContainer: {
-    marginRight: 24,
-    marginTop: 20,
+    marginRight: horizontalScale(24),
+    marginTop: verticalScale(20),
   },
   titleContainer: {
-    marginTop: 20,
-    marginHorizontal: 28,
+    marginTop: verticalScale(20),
+    marginHorizontal: horizontalScale(28),
   },
   listMessage: {
-    marginVertical: 10,
+    marginVertical: verticalScale(10),
     textAlign: 'center',
   },
   listFooter: {
-    marginBottom: 20,
+    marginBottom: verticalScale(20),
   },
   listHeader: {
-    marginBottom: 10,
+    marginBottom: verticalScale(10),
   },
   listEmpty: {
-    marginTop: 20,
+    marginTop: verticalScale(20),
   },
   postListContent: {
-    paddingHorizontal: 16,
+    paddingHorizontal: horizontalScale(16),
   },
 });
 

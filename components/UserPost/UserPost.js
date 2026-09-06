@@ -10,6 +10,7 @@ import {
   faHeart,
 } from '@fortawesome/free-regular-svg-icons';
 import {faEllipsisH} from '@fortawesome/free-solid-svg-icons';
+import {horizontalScale, fontScale} from '../../assets/styles/scaling';
 
 const UserPost = props => {
   return (
@@ -18,7 +19,7 @@ const UserPost = props => {
         <View>
           <UserProfileImage
             profileImage={props.profileImage}
-            imageDimensions={48}
+            imageDimensions={horizontalScale(48)}
           />
         </View>
         <View style={style.userDetailsContainer}>
@@ -34,22 +35,38 @@ const UserPost = props => {
           accessibilityRole="button"
           disabled={!props.onMoreOptionsPress}
           onPress={() => props.onMoreOptionsPress?.(props.id)}>
-          <FontAwesomeIcon icon={faEllipsisH} color="gray" size={24} />
+          <FontAwesomeIcon
+            icon={faEllipsisH}
+            color="gray"
+            size={fontScale(24)}
+          />
         </TouchableOpacity>
       </View>
       <View style={style.postImageContainer}>
         <Image source={props.image} style={style.postImage} />
         <View style={style.postDetailsContainer}>
           <View style={style.postDetailsItem}>
-            <FontAwesomeIcon icon={faHeart} color="#76869F" size={24} />
+            <FontAwesomeIcon
+              icon={faHeart}
+              color="#76869F"
+              size={fontScale(24)}
+            />
             <Text style={style.likes}>{props.likes}</Text>
           </View>
           <View style={style.postDetailsItemComment}>
-            <FontAwesomeIcon icon={faComment} color="#76869F" size={24} />
+            <FontAwesomeIcon
+              icon={faComment}
+              color="#76869F"
+              size={fontScale(24)}
+            />
             <Text style={style.comments}>{props.comments}</Text>
           </View>
           <View style={style.postDetailsItemComment}>
-            <FontAwesomeIcon icon={faBookmark} color="#76869F" size={24} />
+            <FontAwesomeIcon
+              icon={faBookmark}
+              color="#76869F"
+              size={fontScale(24)}
+            />
             <Text style={style.bookmarks}>{props.bookmarks}</Text>
           </View>
         </View>

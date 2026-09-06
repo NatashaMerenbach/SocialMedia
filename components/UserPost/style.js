@@ -1,9 +1,14 @@
 import {StyleSheet} from 'react-native';
 import {getFontFamily} from '../../helper';
+import {
+  fontScale,
+  horizontalScale,
+  verticalScale,
+} from '../../assets/styles/scaling';
 
 const style = StyleSheet.create({
   container: {
-    marginBottom: 16,
+    marginBottom: verticalScale(16),
     width: '100%',
   },
   userInfoContainer: {
@@ -15,65 +20,65 @@ const style = StyleSheet.create({
     flexDirection: 'column',
     flex: 1,
     justifyContent: 'center',
-    marginLeft: 10,
+    marginLeft: horizontalScale(10),
   },
   userName: {
     color: '#022150',
-    fontSize: 16,
+    fontSize: fontScale(16),
     fontFamily: getFontFamily('600'),
   },
   location: {
     textAlign: 'left',
     color: '#79869F',
-    fontSize: 12,
+    fontSize: fontScale(12),
     fontFamily: getFontFamily('400'),
-    marginTop: 5,
+    marginTop: verticalScale(5),
   },
   postImageContainer: {
-    marginTop: 35,
-    marginLeft: 10,
+    marginTop: verticalScale(35),
+    marginLeft: horizontalScale(10),
     borderBottomWidth: 1,
-    paddingBottom: 20,
+    paddingBottom: verticalScale(20),
     borderBottomColor: '#EFF2F6',
   },
   postImage: {
-    marginTop: 20,
+    marginTop: verticalScale(20),
     alignSelf: 'center',
     width: '100%',
-    borderRadius: 20,
+    borderRadius: horizontalScale(20),
   },
   postDetailsContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 20,
+    marginVertical: verticalScale(20),
   },
   postDetailsItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: 20,
+    marginLeft: horizontalScale(20),
   },
   postDetailsItemComment: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: 27,
+    marginLeft: horizontalScale(27),
   },
   likes: {
     color: '#76869F',
-    fontSize: 14,
+    fontSize: fontScale(14),
     fontFamily: getFontFamily('400'),
-    marginLeft: 3,
+    marginLeft: horizontalScale(3),
   },
   comments: {
     color: '#76869F',
-    fontSize: 14,
+    fontSize: fontScale(14),
     fontFamily: getFontFamily('400'),
-    marginLeft: 3,
+    marginLeft: horizontalScale(3),
   },
   bookmarks: {
     color: '#76869F',
-    fontSize: 14,
+    fontSize: fontScale(14),
     fontFamily: getFontFamily('400'),
-    marginLeft: 3,
+    marginLeft: horizontalScale(3),
   },
 });
 
