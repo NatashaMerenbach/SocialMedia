@@ -1,73 +1,37 @@
 import {StyleSheet} from 'react-native';
+import {fontScale} from './scaling';
 import {getFontFamily} from '../../helper';
-import {horizontalScale, verticalScale, fontScale} from './scaling';
 
 const globalStyle = StyleSheet.create({
-  screen: {
+  backgroundWhite: {
+    backgroundColor: '#FFFFFF',
+  },
+  flex: {
     flex: 1,
   },
-  header: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginLeft: horizontalScale(27),
-    marginRight: horizontalScale(17),
-    marginTop: verticalScale(30),
-  },
-  messageIcon: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: horizontalScale(14),
-  },
-  messageNumberContainer: {
+  backgroundPink: {
     backgroundColor: '#F35BAC',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-    width: horizontalScale(10),
-    height: horizontalScale(10),
-    borderRadius: horizontalScale(10),
-    position: 'absolute',
-    right: horizontalScale(11),
-    top: verticalScale(12),
   },
-  messageNumber: {
+  textBlack: {
+    color: '#022150',
+  },
+  textWhite: {
     color: '#FFFFFF',
-    fontSize: fontScale(6),
+  },
+  textPink: {
+    color: '#F35BAC',
+  },
+  textBold: {
     fontFamily: getFontFamily('600'),
   },
-  userStoryContainer: {
-    marginTop: verticalScale(20),
-    marginHorizontal: horizontalScale(28),
+  textRegular: {
+    fontFamily: getFontFamily('400'),
   },
-  userStoryList: {
-    flexGrow: 0,
-    height: horizontalScale(100),
-    width: '100%',
+  textMedium: {
+    fontFamily: getFontFamily('500'),
   },
-  userPostContainer: {
-    marginRight: horizontalScale(24),
-    marginTop: verticalScale(20),
-  },
-  titleContainer: {
-    marginTop: verticalScale(20),
-    marginHorizontal: horizontalScale(28),
-  },
-  listMessage: {
-    marginVertical: verticalScale(10),
-    textAlign: 'center',
-  },
-  listFooter: {
-    marginBottom: verticalScale(20),
-  },
-  listHeader: {
-    marginBottom: verticalScale(10),
-  },
-  listEmpty: {
-    marginTop: verticalScale(20),
-  },
-  postListContent: {
-    paddingHorizontal: horizontalScale(16),
+  textSize14: {
+    fontSize: fontScale(14),
   },
 });
 

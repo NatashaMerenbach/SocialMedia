@@ -1,3 +1,16 @@
+# React Native 0.72 points Boost 1.76 to a retired JFrog URL. Keep the
+# expected checksum while switching the generated podspec to Boost's archive.
+boost_podspec = File.join(__dir__, '../node_modules/react-native/third-party-podspecs/boost.podspec')
+if File.exist?(boost_podspec)
+  boost_contents = File.read(boost_podspec)
+  boost_archive_url = 'https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.bz2'
+  boost_contents = boost_contents.gsub(
+    'https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2',
+    boost_archive_url
+  )
+  File.write(boost_podspec, boost_contents)
+end
+
 # Resolve react_native_pods.rb with node to allow for hoisting
 require Pod::Executable.execute_command('node', ['-p',
   'require.resolve(
@@ -17,7 +30,7 @@ prepare_react_native_project!
 #   dependencies: {
 #     ...(process.env.NO_FLIPPER ? { 'react-native-flipper': { platforms: { ios: null } } } : {}),
 # ```
-flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
+flipper_config = FlipperConfiguration.disabled
 
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
