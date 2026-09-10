@@ -1,3 +1,5 @@
+import {Platform} from 'react-native';
+
 export const getFontFamily = fontWeight => {
   switch (fontWeight) {
     case '100':
@@ -13,7 +15,9 @@ export const getFontFamily = fontWeight => {
     case '500':
       return 'Inter-Medium';
     case '600':
-      return 'Inter-SemiBold';
+      return Platform.OS === 'ios'
+        ? 'Inter18pt-SemiBold'
+        : 'Inter_18pt-SemiBold';
     case 'bold':
       return 'Inter-Bold';
     case '700':

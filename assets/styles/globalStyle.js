@@ -33,6 +33,9 @@ const globalStyle = StyleSheet.create({
   textSize14: {
     fontSize: fontScale(14),
   },
+  flexGrow: {
+    flexGrow: 1,
+  },
 });
 
 export default globalStyle;

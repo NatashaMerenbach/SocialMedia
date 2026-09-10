@@ -14,7 +14,6 @@ import style from './style';
 import UserStory from '../../components/UserStory/UserStory';
 import UserPost from '../../components/UserPost/UserPost';
 import {fontScale} from '../../assets/styles/scaling';
-import {Routs} from '../../navigation/Routs';
 import globalStyle from '../../assets/styles/globalStyle';
 
 const defaultProfileImage = require('../../assets/images/default_profile.png');
@@ -246,7 +245,6 @@ const Home = ({navigation}) => {
                 activeOpacity={0.7}
                 onPress={() => {
                   console.log('Envelope pressed');
-                  navigation.navigate(Routs.Profile);
                 }}
                 style={style.messageIcon}>
                 <FontAwesomeIcon
